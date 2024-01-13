@@ -12,7 +12,7 @@ final class OnboardingViewModel : ObservableObject {
     
     init() {
       onboardingPages = [
-        OnboardingPage(imageName: .onboarding1, title: "Find your Food", description: "Here you can find a chef or dish for every taste and      color."),
+        OnboardingPage(imageName: .onboarding1, title: "Find your Food", description: "Here you can find a chef or dish for every taste and color."),
         OnboardingPage(imageName: .onboarding2, title: "Food ninja is where your comfort food lives", description: "Enjou a fast and smooth food delivery at your doorstep")
       ]
     }

@@ -7,22 +7,25 @@
 
 import SwiftUI
 
+
 struct ContentView: View {
     @State private var endSplash = true
+    @ObservedObject private var appState = AppState()
+    
     var body: some View {
         NavigationView {
             if endSplash {
                 SplashView()
             } else {
                 OnboardingTabView()
+                    .environmentObject(appState)
             }
         }
         .onAppear(perform: {
             DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
-                endSplash = false 
+                endSplash = false
             }
         })
-        
     }
 }
 

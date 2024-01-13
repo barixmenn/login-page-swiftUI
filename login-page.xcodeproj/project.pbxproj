@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		75252BE72B532BAB001668C0 /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75252BE62B532BAB001668C0 /* CustomButton.swift */; };
+		75252BEA2B532DDE001668C0 /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75252BE92B532DDE001668C0 /* AppState.swift */; };
 		757864BD2B531CA200A6665E /* OnboardingContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 757864BC2B531CA200A6665E /* OnboardingContent.swift */; };
 		757864C02B531ED700A6665E /* OnboardingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 757864BF2B531ED700A6665E /* OnboardingViewModel.swift */; };
 		757864C22B531F9900A6665E /* OnboardingTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 757864C12B531F9900A6665E /* OnboardingTabView.swift */; };
@@ -19,6 +21,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		75252BE62B532BAB001668C0 /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
+		75252BE92B532DDE001668C0 /* AppState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
 		757864BC2B531CA200A6665E /* OnboardingContent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingContent.swift; sourceTree = "<group>"; };
 		757864BF2B531ED700A6665E /* OnboardingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewModel.swift; sourceTree = "<group>"; };
 		757864C12B531F9900A6665E /* OnboardingTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingTabView.swift; sourceTree = "<group>"; };
@@ -42,6 +46,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		75252BE52B532B98001668C0 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				75252BE62B532BAB001668C0 /* CustomButton.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		75252BE82B532DD6001668C0 /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				75252BE92B532DDE001668C0 /* AppState.swift */,
+			);
+			path = Helper;
+			sourceTree = "<group>";
+		};
 		757864BB2B531C8300A6665E /* Onboarding */ = {
 			isa = PBXGroup;
 			children = (
@@ -79,6 +99,8 @@
 		7591C2202B5027680095A694 /* login-page */ = {
 			isa = PBXGroup;
 			children = (
+				75252BE82B532DD6001668C0 /* Helper */,
+				75252BE52B532B98001668C0 /* Components */,
 				757864BB2B531C8300A6665E /* Onboarding */,
 				7591C2322B502A240095A694 /* Extensions */,
 				7591C22F2B5029D00095A694 /* Splash */,
@@ -187,7 +209,9 @@
 				7591C2242B5027680095A694 /* ContentView.swift in Sources */,
 				757864C02B531ED700A6665E /* OnboardingViewModel.swift in Sources */,
 				757864BD2B531CA200A6665E /* OnboardingContent.swift in Sources */,
+				75252BEA2B532DDE001668C0 /* AppState.swift in Sources */,
 				7591C2342B502A2D0095A694 /* Image.swift in Sources */,
+				75252BE72B532BAB001668C0 /* CustomButton.swift in Sources */,
 				757864C22B531F9900A6665E /* OnboardingTabView.swift in Sources */,
 				7591C2222B5027680095A694 /* login_pageApp.swift in Sources */,
 				7591C2312B5029DB0095A694 /* SplashView.swift in Sources */,
