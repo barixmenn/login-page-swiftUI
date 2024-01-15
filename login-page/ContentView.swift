@@ -16,7 +16,9 @@ struct ContentView: View {
         NavigationView {
             if endSplash {
                 SplashView()
-            } else {
+            } else if appState.isOnboardingDone {
+                LoginView()
+            }else {
                 OnboardingTabView()
                     .environmentObject(appState)
             }
