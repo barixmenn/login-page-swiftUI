@@ -9,6 +9,7 @@ import SwiftUI
 
 struct LoginView: View {
     
+    @EnvironmentObject private var navigationState : NavigationState
     @ObservedObject var viewModel = LoginViewModel()
     
     var body: some View {
@@ -54,12 +55,22 @@ struct LoginView: View {
                 CustomButton(config: config)
                     .frame(width: 140)
                     .padding(.top,40)
+                
+                Button {
+                    navigationState.push(to: .signup)
+                    
+                } label: {
+                    Text("Don't have an account, Signup here")
+                        .font(.system(size: 14,weight: .medium))
+                        .foregroundColor(.lightGreen)
+                }
+                .padding(.top)
             }
             .padding(.horizontal)
         }
     }
 }
 
-#Preview {
-    LoginView()
-}
+//#Preview {
+//    LoginView()
+//}

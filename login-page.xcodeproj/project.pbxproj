@@ -21,6 +21,11 @@
 		7591C2292B5027690095A694 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7591C2282B5027690095A694 /* Preview Assets.xcassets */; };
 		7591C2312B5029DB0095A694 /* SplashView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7591C2302B5029DB0095A694 /* SplashView.swift */; };
 		7591C2342B502A2D0095A694 /* Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7591C2332B502A2D0095A694 /* Image.swift */; };
+		75A2FC332B66FED900C77F88 /* NavigationState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75A2FC322B66FED900C77F88 /* NavigationState.swift */; };
+		75A2FC352B66FF2700C77F88 /* SignupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75A2FC342B66FF2700C77F88 /* SignupView.swift */; };
+		75A2FC392B67020300C77F88 /* SignupViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75A2FC382B67020300C77F88 /* SignupViewModel.swift */; };
+		75A2FC3B2B6705EC00C77F88 /* SignupBioView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75A2FC3A2B6705EC00C77F88 /* SignupBioView.swift */; };
+		75A2FC3D2B6705F700C77F88 /* SignupPaymentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75A2FC3C2B6705F700C77F88 /* SignupPaymentView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,6 +44,11 @@
 		7591C2282B5027690095A694 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		7591C2302B5029DB0095A694 /* SplashView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashView.swift; sourceTree = "<group>"; };
 		7591C2332B502A2D0095A694 /* Image.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Image.swift; sourceTree = "<group>"; };
+		75A2FC322B66FED900C77F88 /* NavigationState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationState.swift; sourceTree = "<group>"; };
+		75A2FC342B66FF2700C77F88 /* SignupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupView.swift; sourceTree = "<group>"; };
+		75A2FC382B67020300C77F88 /* SignupViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupViewModel.swift; sourceTree = "<group>"; };
+		75A2FC3A2B6705EC00C77F88 /* SignupBioView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupBioView.swift; sourceTree = "<group>"; };
+		75A2FC3C2B6705F700C77F88 /* SignupPaymentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupPaymentView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,6 +75,7 @@
 			isa = PBXGroup;
 			children = (
 				75252BE92B532DDE001668C0 /* AppState.swift */,
+				75A2FC322B66FED900C77F88 /* NavigationState.swift */,
 			);
 			path = Helper;
 			sourceTree = "<group>";
@@ -90,9 +101,11 @@
 		75880E262B55A01D0002BB23 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				75A2FC362B6701EC00C77F88 /* Signup */,
 				75880E272B55A0370002BB23 /* Login */,
 				757864BB2B531C8300A6665E /* Onboarding */,
 				7591C22F2B5029D00095A694 /* Splash */,
+				75A2FC3A2B6705EC00C77F88 /* SignupBioView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -141,6 +154,7 @@
 				7591C2232B5027680095A694 /* ContentView.swift */,
 				7591C2252B5027690095A694 /* Assets.xcassets */,
 				7591C2272B5027690095A694 /* Preview Content */,
+				75A2FC3C2B6705F700C77F88 /* SignupPaymentView.swift */,
 			);
 			path = "login-page";
 			sourceTree = "<group>";
@@ -167,6 +181,23 @@
 				7591C2332B502A2D0095A694 /* Image.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		75A2FC362B6701EC00C77F88 /* Signup */ = {
+			isa = PBXGroup;
+			children = (
+				75A2FC372B6701F500C77F88 /* ViewModel */,
+				75A2FC342B66FF2700C77F88 /* SignupView.swift */,
+			);
+			path = Signup;
+			sourceTree = "<group>";
+		};
+		75A2FC372B6701F500C77F88 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				75A2FC382B67020300C77F88 /* SignupViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -239,15 +270,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				75A2FC352B66FF2700C77F88 /* SignupView.swift in Sources */,
 				7591C2242B5027680095A694 /* ContentView.swift in Sources */,
 				757864C02B531ED700A6665E /* OnboardingViewModel.swift in Sources */,
 				75880E2C2B55A1110002BB23 /* LoginViewModel.swift in Sources */,
 				757864BD2B531CA200A6665E /* OnboardingContent.swift in Sources */,
+				75A2FC332B66FED900C77F88 /* NavigationState.swift in Sources */,
+				75A2FC392B67020300C77F88 /* SignupViewModel.swift in Sources */,
 				75252BEA2B532DDE001668C0 /* AppState.swift in Sources */,
 				7591C2342B502A2D0095A694 /* Image.swift in Sources */,
+				75A2FC3B2B6705EC00C77F88 /* SignupBioView.swift in Sources */,
 				75252BE72B532BAB001668C0 /* CustomButton.swift in Sources */,
 				757864C22B531F9900A6665E /* OnboardingTabView.swift in Sources */,
 				7512130D2B55D37400A325D5 /* CustomTextField.swift in Sources */,
+				75A2FC3D2B6705F700C77F88 /* SignupPaymentView.swift in Sources */,
 				7591C2222B5027680095A694 /* login_pageApp.swift in Sources */,
 				75880E292B55A03E0002BB23 /* LoginView.swift in Sources */,
 				7591C2312B5029DB0095A694 /* SplashView.swift in Sources */,

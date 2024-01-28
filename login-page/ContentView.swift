@@ -10,6 +10,7 @@ import SwiftUI
 
 struct ContentView: View {
     @State private var endSplash = true
+    @ObservedObject private var navigationState = NavigationState()
     @ObservedObject private var appState = AppState()
     
     var body: some View {
@@ -17,7 +18,14 @@ struct ContentView: View {
             if endSplash {
                 SplashView()
             } else if appState.isOnboardingDone {
-                LoginView()
+                NavigationStack(path: $navigationState.path) {
+                    LoginView()
+                        .environmentObject(navigationState)
+                        .navigationDestination(for: NavigationDestination.self) { path in
+                            path.view
+                                .environmentObject(navigationState)
+                        }
+                }
             }else {
                 OnboardingTabView()
                     .environmentObject(appState)

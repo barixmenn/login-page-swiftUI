@@ -7,12 +7,36 @@
 
 import SwiftUI
 
-struct NavigationState: View {
-    var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
-    }
+enum NavigationDestination : Hashable {
+    case login, signup, signupBioView, signPaymentView
+      
+      @ViewBuilder
+      var view: some View {
+          switch self {
+          case .login:
+              LoginView()
+          case .signup:
+              SignupView()
+          case .signupBioView:
+              SignupBioView()
+          case .signPaymentView:
+              SignupPaymentView()
+          }
+      }
 }
 
-#Preview {
-    NavigationState()
+final class NavigationState : ObservableObject {
+    @Published var path: [NavigationDestination] = []
+    
+    func popToRoot() {
+        path.removeAll()
+    }
+    
+    func popView() {
+        path.removeLast()
+    }
+    
+    func push(to view: NavigationDestination) {
+        path.append(view)
+    }
 }
